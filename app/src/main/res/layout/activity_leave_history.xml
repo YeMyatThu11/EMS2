@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.Home"
+    android:background="@drawable/repeat_background">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.AppCompat.NoActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/colorPrimary"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:id="@+id/leaveBtn"
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    app:mrl_rippleAlpha=".1"
+                    app:mrl_rippleColor="@color/ripple_effect"
+                    app:mrl_rippleRoundedCorners="104dp"
+                    app:mrl_rippleDimension="10dp"
+                    app:mrl_rippleHover="true"
+                    app:mrl_rippleDelayClick="true"
+                    app:mrl_rippleOverlay="true">
+                    <ImageButton
+                        android:id="@+id/backButton"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:background="@color/colorPrimary"
+                        android:src="@drawable/ic_baseline_arrow_back_ios_24"
+                        android:layout_gravity="center"
+                        />
+                </com.balysv.materialripple.MaterialRippleLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center"
+                    android:textSize="16dp"
+                    android:layout_marginLeft="12dp"
+                    android:text="Leave History"/>
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:id="@+id/searchBtn"
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    app:mrl_rippleAlpha=".1"
+                    app:mrl_rippleColor="@color/ripple_effect"
+                    app:mrl_rippleRoundedCorners="104dp"
+                    app:mrl_rippleDimension="10dp"
+                    app:mrl_rippleHover="true"
+                    app:mrl_rippleDelayClick="true"
+                    android:layout_marginRight="14dp"
+                    app:mrl_rippleOverlay="true">
+
+                <ImageButton
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:background="@color/colorPrimary"
+                    android:src="@drawable/ic_baseline_search_24"
+                    android:padding="5dp"
+                    android:layout_gravity="center"
+                    />
+                </com.balysv.materialripple.MaterialRippleLayout>
+
+
+            </LinearLayout>
+
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv_leave_history"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="58dp"/>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
